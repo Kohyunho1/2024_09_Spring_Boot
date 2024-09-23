@@ -7,11 +7,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UsrHomeController {
 	
-	int a = 0;
-	
-	@GetMapping("/usr/home/count")
+	@GetMapping("/usr/home/main")
 	@ResponseBody
-	public int showMain() {
-		return a++;
+	public String showMain() {
+		return "안녕하세요";
+	}
+	
+	@GetMapping("/usr/home/main2")
+	@ResponseBody
+	public int showMain2() {
+		return 10;
 	}
 }
